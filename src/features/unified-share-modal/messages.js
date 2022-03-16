@@ -521,6 +521,31 @@ const messages = defineMessages({
             'Text to show when the number of contact email addresses displayed on a tooltip exceeds the maximum amount that can be displayed',
         id: 'boxui.unifiedShare.contactEmailsTooltipText',
     },
+    contentInsightsHeading: {
+        defaultMessage: 'Content Insights',
+        description: 'Heading text for the content insights section of the sharing modal',
+        id: 'boxui.unifiedShare.contentInsightsHeading',
+    },
+    contentInsightsActive: {
+        defaultMessage: 'Advanced Content Insights are activated',
+        description: 'Call to action text for allowing the user to enable advanced content insights',
+        id: 'boxui.unifiedShare.contentInsightsActive',
+    },
+    contentInsightsInactive: {
+        defaultMessage: 'Advanced Content Insights are deactivated',
+        description: 'Call to action text for allowing the user to disable advanced content insights',
+        id: 'boxui.unifiedShare.contentInsightsInactive',
+    },
+    contentInsightsRequireEmail: {
+        defaultMessage: 'Request email from anonymous viewers',
+        description: 'Label for checkbox to require anonymous users to provide their email address during preview',
+        id: 'boxui.unifiedShare.contentInsightsRequireEmail',
+    },
+    contentInsightsRequireNotify: {
+        defaultMessage: 'Notify me when someone previews this file',
+        description: 'Label for checkbox to enable notifications for previews of this file',
+        id: 'boxui.unifiedShare.contentInsightsNotify',
+    },
 });
 
 export default messages;

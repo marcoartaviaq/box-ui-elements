@@ -16,6 +16,7 @@ import { ITEM_TYPE_WEBLINK } from '../../common/constants';
 import Tooltip from '../../components/tooltip';
 import { CollaboratorAvatars, CollaboratorList } from '../collaborator-avatars';
 
+import ContentInsightsSection from './ContentInsightsSection';
 import InviteePermissionsMenu from './InviteePermissionsMenu';
 import messages from './messages';
 import SharedLinkSection from './SharedLinkSection';
@@ -657,9 +658,10 @@ class UnifiedShareForm extends React.Component<USFProps, State> {
         const {
             allShareRestrictionWarning,
             changeSharedLinkAccessLevel,
-            createSharedLinkOnLoad,
             changeSharedLinkPermissionLevel,
             config,
+            contentInsightsConfig,
+            createSharedLinkOnLoad,
             displayInModal,
             focusSharedLinkOnLoad,
             getSharedLinkContacts,
@@ -669,6 +671,9 @@ class UnifiedShareForm extends React.Component<USFProps, State> {
             isFetching,
             item,
             onAddLink,
+            onAdvancedInsightsEmailToggle,
+            onAdvancedInsightsNotificationToggle,
+            onAdvancedInsightsToggle,
             onCopyError,
             onCopyInit,
             onCopySuccess,
@@ -731,6 +736,17 @@ class UnifiedShareForm extends React.Component<USFProps, State> {
                             submitting={submitting || isFetching}
                             trackingProps={sharedLinkTracking}
                             tooltips={tooltips}
+                        />
+                    )}
+
+                    {!isEmailLinkSectionExpanded && !isInviteSectionExpanded && !showCollaboratorList && (
+                        <ContentInsightsSection
+                            contentInsightsConfig={contentInsightsConfig}
+                            item={item}
+                            onAdvancedInsightsToggle={onAdvancedInsightsToggle}
+                            onAdvancedInsightsEmailToggle={onAdvancedInsightsEmailToggle}
+                            onAdvancedInsightsNotificationToggle={onAdvancedInsightsNotificationToggle}
+                            submitting={submitting || isFetching}
                         />
                     )}
 

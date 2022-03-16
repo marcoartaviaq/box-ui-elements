@@ -187,6 +187,12 @@ export type collaboratorsListType = {
     collaborators: Array<collaboratorType>,
 };
 
+export type contentInsightsConfigType = {
+    isActive: boolean,
+    requireEmail: false,
+    requireNotification: false,
+};
+
 export type tooltipComponentIdentifierType =
     | 'shared-link-access-menu'
     | 'shared-link-copy-button'
@@ -288,6 +294,13 @@ type SharedLinkSectionTypes = {
     tooltips?: { [componentIdentifier: tooltipComponentIdentifierType]: React.Node },
 };
 
+type ContentInsightsSectionTypes = {
+    contentInsightsConfig: contentInsightsConfigType,
+    onAdvancedInsightsEmailToggle: (isEnabled: boolean) => void,
+    onAdvancedInsightsNotificationToggle: (isEnabled: boolean) => void,
+    onAdvancedInsightsToggle: (isEnabled: boolean) => void,
+};
+
 // Prop types used in the collaborator avatars section of the Unified Share Form
 type CollaboratorAvatarsTypes = {
     /** List of existing collaborators */
@@ -319,6 +332,7 @@ export type USMConfig = {
 
 // Prop types shared by both the Unified Share Modal and the Unified Share Form
 type BaseUnifiedShareProps = CollaboratorAvatarsTypes &
+    ContentInsightsSectionTypes &
     EmailFormTypes &
     ExternalCollabRestrictionsTypes &
     InviteSectionTypes &
