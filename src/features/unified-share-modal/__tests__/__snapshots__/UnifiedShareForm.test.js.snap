@@ -159,6 +159,20 @@ exports[`features/unified-share-modal/UnifiedShareForm closeEmailSharedLinkForm(
       trackingProps={Object {}}
       triggerCopyOnLoad={false}
     />
+    <ContentInsightsSection
+      item={
+        Object {
+          "grantedPermissions": Object {
+            "itemShare": true,
+          },
+          "hideCollaborators": false,
+          "id": "111",
+          "name": "test file",
+          "type": "file",
+          "typedID": "f_111",
+        }
+      }
+    />
   </LoadingIndicatorWrapper>
 </div>
 `;
@@ -358,6 +372,20 @@ exports[`features/unified-share-modal/UnifiedShareForm render() should not rende
       trackingProps={Object {}}
       triggerCopyOnLoad={false}
     />
+    <ContentInsightsSection
+      item={
+        Object {
+          "grantedPermissions": Object {
+            "itemShare": true,
+          },
+          "hideCollaborators": false,
+          "id": "111",
+          "name": "test file",
+          "type": "file",
+          "typedID": "f_111",
+        }
+      }
+    />
   </LoadingIndicatorWrapper>
 </div>
 `;
@@ -520,6 +548,20 @@ exports[`features/unified-share-modal/UnifiedShareForm render() should not rende
       tooltips={Object {}}
       trackingProps={Object {}}
       triggerCopyOnLoad={false}
+    />
+    <ContentInsightsSection
+      item={
+        Object {
+          "grantedPermissions": Object {
+            "itemShare": true,
+          },
+          "hideCollaborators": false,
+          "id": "111",
+          "name": "test file",
+          "type": "file",
+          "typedID": "f_111",
+        }
+      }
     />
   </LoadingIndicatorWrapper>
 </div>
@@ -688,6 +730,20 @@ exports[`features/unified-share-modal/UnifiedShareForm render() should render a 
       trackingProps={Object {}}
       triggerCopyOnLoad={false}
     />
+    <ContentInsightsSection
+      item={
+        Object {
+          "grantedPermissions": Object {
+            "itemShare": true,
+          },
+          "hideCollaborators": false,
+          "id": "111",
+          "name": "test file",
+          "type": "file",
+          "typedID": "f_111",
+        }
+      }
+    />
   </LoadingIndicatorWrapper>
 </div>
 `;
@@ -851,6 +907,20 @@ exports[`features/unified-share-modal/UnifiedShareForm render() should render a 
       tooltips={Object {}}
       trackingProps={Object {}}
       triggerCopyOnLoad={false}
+    />
+    <ContentInsightsSection
+      item={
+        Object {
+          "grantedPermissions": Object {
+            "itemShare": true,
+          },
+          "hideCollaborators": false,
+          "id": "111",
+          "name": "test file",
+          "type": "file",
+          "typedID": "f_111",
+        }
+      }
     />
   </LoadingIndicatorWrapper>
 </div>
@@ -1016,6 +1086,21 @@ exports[`features/unified-share-modal/UnifiedShareForm render() should render a 
       tooltips={Object {}}
       trackingProps={Object {}}
       triggerCopyOnLoad={false}
+    />
+    <ContentInsightsSection
+      item={
+        Object {
+          "grantedPermissions": Object {
+            "itemShare": true,
+          },
+          "hideCollaborators": false,
+          "id": "111",
+          "name": "test file",
+          "type": "file",
+          "typedID": "f_111",
+        }
+      }
+      submitting={true}
     />
   </LoadingIndicatorWrapper>
 </div>
@@ -1317,6 +1402,21 @@ exports[`features/unified-share-modal/UnifiedShareForm render() should render a 
       trackingProps={Object {}}
       triggerCopyOnLoad={false}
     />
+    <ContentInsightsSection
+      item={
+        Object {
+          "grantedPermissions": Object {
+            "itemShare": true,
+          },
+          "hideCollaborators": false,
+          "id": "111",
+          "name": "test file",
+          "type": "web_link",
+          "typedID": "f_111",
+        }
+      }
+      submitting={false}
+    />
   </LoadingIndicatorWrapper>
 </div>
 `;
@@ -1480,6 +1580,20 @@ exports[`features/unified-share-modal/UnifiedShareForm render() should render a 
       tooltips={Object {}}
       trackingProps={Object {}}
       triggerCopyOnLoad={false}
+    />
+    <ContentInsightsSection
+      item={
+        Object {
+          "grantedPermissions": Object {
+            "itemShare": true,
+          },
+          "hideCollaborators": false,
+          "id": "111",
+          "name": "test file",
+          "type": "folder",
+          "typedID": "f_111",
+        }
+      }
     />
   </LoadingIndicatorWrapper>
 </div>
@@ -1646,6 +1760,21 @@ exports[`features/unified-share-modal/UnifiedShareForm render() should render a 
       tooltips={Object {}}
       trackingProps={Object {}}
       triggerCopyOnLoad={false}
+    />
+    <ContentInsightsSection
+      item={
+        Object {
+          "grantedPermissions": Object {
+            "itemShare": true,
+          },
+          "hideCollaborators": false,
+          "id": "111",
+          "name": "test file",
+          "type": "file",
+          "typedID": "f_111",
+        }
+      }
+      submitting={false}
     />
   </LoadingIndicatorWrapper>
 </div>
@@ -1988,6 +2117,21 @@ exports[`features/unified-share-modal/UnifiedShareForm render() should render a 
       trackingProps={Object {}}
       triggerCopyOnLoad={false}
     />
+    <ContentInsightsSection
+      item={
+        Object {
+          "grantedPermissions": Object {
+            "itemShare": true,
+          },
+          "hideCollaborators": false,
+          "id": "111",
+          "name": "test file",
+          "type": "file",
+          "typedID": "f_111",
+        }
+      }
+      submitting={false}
+    />
   </LoadingIndicatorWrapper>
 </div>
 `;
@@ -2155,6 +2299,20 @@ exports[`features/unified-share-modal/UnifiedShareForm render() should render a 
       trackingProps={Object {}}
       triggerCopyOnLoad={false}
     />
+    <ContentInsightsSection
+      item={
+        Object {
+          "grantedPermissions": Object {
+            "itemShare": true,
+          },
+          "hideCollaborators": false,
+          "id": "111",
+          "name": "test file",
+          "type": "file",
+          "typedID": "f_111",
+        }
+      }
+    />
   </LoadingIndicatorWrapper>
 </div>
 `;
@@ -2320,6 +2478,21 @@ exports[`features/unified-share-modal/UnifiedShareForm render() should render a 
       trackingProps={Object {}}
       triggerCopyOnLoad={false}
     />
+    <ContentInsightsSection
+      item={
+        Object {
+          "grantedPermissions": Object {
+            "itemShare": true,
+          },
+          "hideCollaborators": false,
+          "id": "111",
+          "name": "test file",
+          "type": "file",
+          "typedID": "f_111",
+        }
+      }
+      submitting={false}
+    />
   </LoadingIndicatorWrapper>
 </div>
 `;
@@ -2483,6 +2656,21 @@ exports[`features/unified-share-modal/UnifiedShareForm render() should render a 
       tooltips={Object {}}
       trackingProps={Object {}}
       triggerCopyOnLoad={false}
+    />
+    <ContentInsightsSection
+      item={
+        Object {
+          "grantedPermissions": Object {
+            "itemShare": true,
+          },
+          "hideCollaborators": false,
+          "id": "111",
+          "name": "test file",
+          "type": "file",
+          "typedID": "f_111",
+        }
+      }
+      submitting={false}
     />
   </LoadingIndicatorWrapper>
 </div>

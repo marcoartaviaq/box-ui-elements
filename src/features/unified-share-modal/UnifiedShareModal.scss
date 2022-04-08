@@ -244,6 +244,14 @@
         }
     }
 
+    .ContentInsightsSection-toggle {
+        display: flex;
+
+        .toggle-container {
+            flex: 0 1 50%;
+        }
+    }
+
     .shared-link-access-row {
         .btn-plain {
             margin-right: 10px;

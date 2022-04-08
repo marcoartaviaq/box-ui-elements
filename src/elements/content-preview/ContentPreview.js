@@ -83,6 +83,7 @@ type Props = {
     canDownload?: boolean,
     className: string,
     collection: Array<string | BoxItem>,
+    contentInsightsOptions?: Object,
     contentOpenWithProps: ContentOpenWithProps,
     contentSidebarProps: ContentSidebarProps,
     enableThumbnailsSidebar: boolean,
@@ -222,6 +223,7 @@ class ContentPreview extends React.PureComponent<Props, State> {
         canDownload: true,
         className: '',
         collection: [],
+        contentInsightsOptions: {},
         contentOpenWithProps: {},
         contentSidebarProps: {},
         enableThumbnailsSidebar: false,
@@ -362,12 +364,19 @@ class ContentPreview extends React.PureComponent<Props, State> {
      * @return {void}
      */
     componentDidUpdate(prevProps: Props, prevState: State): void {
-        const { previewExperiences, token } = this.props;
-        const { previewExperiences: prevPreviewExperiences, token: prevToken } = prevProps;
+        const { contentInsightsOptions, previewExperiences, token } = this.props;
+        const {
+            previewExperiences: prevPreviewExperiences,
+            token: prevToken,
+            contentInsightsOptions: prevContentInsightsOptions,
+        } = prevProps;
         const { currentFileId } = this.state;
         const hasFileIdChanged = prevState.currentFileId !== currentFileId;
         const hasTokenChanged = prevToken !== token;
         const haveExperiencesChanged = prevPreviewExperiences !== previewExperiences;
+        const haveContentInsightsChanged =
+            prevContentInsightsOptions.contentInsightsConfig?.isActive !==
+            contentInsightsOptions.contentInsightsConfig?.isActive;
 
         if (hasFileIdChanged) {
             this.destroyPreview();
@@ -383,6 +392,10 @@ class ContentPreview extends React.PureComponent<Props, State> {
 
         if (haveExperiencesChanged && this.preview && this.preview.updateExperiences) {
             this.preview.updateExperiences(previewExperiences);
+        }
+
+        if (haveContentInsightsChanged && this.preview && this.preview.updateContentInsightsOptions) {
+            this.preview.updateContentInsightsOptions(contentInsightsOptions);
         }
     }
 
@@ -751,6 +764,7 @@ class ContentPreview extends React.PureComponent<Props, State> {
     loadPreview = async (): Promise<void> => {
         const {
             annotatorState: { activeAnnotationId } = {},
+            contentInsightsOptions,
             enableThumbnailsSidebar,
             fileOptions,
             onAnnotatorEvent,
@@ -790,6 +804,8 @@ class ContentPreview extends React.PureComponent<Props, State> {
 
         const previewOptions = {
             container: `#${this.id} .bcpr-content`,
+            contentInsightsOptions,
+            enableAdvancedContentInsights: true,
             enableThumbnailsSidebar,
             fileOptions: fileOpts,
             header: 'none',
@@ -1209,6 +1225,20 @@ class ContentPreview extends React.PureComponent<Props, State> {
             contentSidebar.refresh();
         }
     }
+
+    /**
+     * Fetches a thumbnail for the page given
+     *
+     * @return {void}
+     */
+    getThumbnail = pageNumber => {
+        const preview = this.getPreview();
+        if (preview) {
+            return preview.getThumbnail(pageNumber);
+        }
+
+        return null;
+    };
 
     /**
      * Renders the file preview

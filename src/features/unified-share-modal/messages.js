@@ -536,6 +536,11 @@ const messages = defineMessages({
         description: 'Call to action text for allowing the user to disable advanced content insights',
         id: 'boxui.unifiedShare.contentInsightsInactive',
     },
+    advancedInsights: {
+        defaultMessage: 'Advanced Insights',
+        description: 'Advanced Insights title',
+        id: 'boxui.unifiedShare.advancedInsights',
+    },
     contentInsightsRequireEmail: {
         defaultMessage: 'Request email from anonymous viewers',
         description: 'Label for checkbox to require anonymous users to provide their email address during preview',
@@ -545,6 +550,24 @@ const messages = defineMessages({
         defaultMessage: 'Notify me when someone previews this file',
         description: 'Label for checkbox to enable notifications for previews of this file',
         id: 'boxui.unifiedShare.contentInsightsNotify',
+    },
+    contentInsightsActiveDescription: {
+        defaultMessage:
+            'Get actionable insights into how viewers are engaging with this content. Measure average time spent, page-by-page engagement, per person and per visit details. {helpLink}',
+        description: 'Description text when advanced content insights are active.',
+        id: 'boxui.unifiedShare.contentInsightsActiveDescription',
+    },
+    contentInsightsInactiveDescription: {
+        defaultMessage:
+            'Previous data collected, such as page and user insights, will remain available. To continue collecting data, reactivate this feature.',
+        description: 'Description text when advanced content insights are inactive',
+        id: 'boxui.unifiedShare.contentInsightsInactiveDescription',
+    },
+    learnMore: {
+        defaultMessage: 'Learn more.',
+        description:
+            'Text for a link that go to an external page with more information about Advanced Content Insights',
+        id: 'boxui.unifiedShare.learnMore',
     },
 });
 
