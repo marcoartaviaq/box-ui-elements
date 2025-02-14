@@ -8,7 +8,7 @@ import { type ItemType, type QuestionType } from '@box/box-ai-content-answers';
 import { RecordActionType } from '@box/box-ai-agent-selector';
 import BoxAISidebarContent from './BoxAISidebarContent';
 import { BoxAISidebarContext } from './context/BoxAISidebarContext';
-import { DOCUMENT_SUGGESTED_QUESTIONS, SPREADSHEET_FILE_EXTENSIONS } from '../common/content-answers/constants';
+import { DOCUMENT_SUGGESTED_QUESTIONS, IMAGE_SUGGESTED_QUESTIONS, IMAGE_FILE_EXTENSIONS, SPREADSHEET_FILE_EXTENSIONS } from '../common/content-answers/constants';
 
 import messages from '../common/content-answers/messages';
 
@@ -109,11 +109,19 @@ const BoxAISidebar = (props: BoxAISidebarProps) => {
         questionsWithoutInProgress = questionsWithoutInProgress.slice(0, -1);
     }
 
-    const localizedQuestions = DOCUMENT_SUGGESTED_QUESTIONS.map(question => ({
+    let suggestedQuestions = DOCUMENT_SUGGESTED_QUESTIONS;
+    const isImage = IMAGE_FILE_EXTENSIONS.includes(fileExtension);
+    if(isImage) {
+        suggestedQuestions = IMAGE_SUGGESTED_QUESTIONS;
+    }
+
+
+    const localizedQuestions = suggestedQuestions.map(question => ({
         id: question.id,
         label: formatMessage(messages[question.labelId]),
         prompt: formatMessage(messages[question.promptId]),
     }));
+    console.log(suggestedQuestions);
 
     const isSpreadsheet = SPREADSHEET_FILE_EXTENSIONS.includes(fileExtension);
 
